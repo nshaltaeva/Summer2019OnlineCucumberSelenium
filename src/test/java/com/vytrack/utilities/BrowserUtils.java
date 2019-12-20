@@ -8,7 +8,9 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.function.Function;
 
 public class BrowserUtils {
@@ -161,6 +163,23 @@ public class BrowserUtils {
     public static void waitForPageTitle(String pageTitle){
         WebDriverWait wait = new WebDriverWait(Driver.get(), 10);
         wait.until(ExpectedConditions.titleIs(pageTitle));
+    }
+
+    /**
+     * This method will convert list of WebElements into list of string
+     *
+     * @param listOfWebElements
+     * @return list of strings
+     */
+    public static List<String> getListOfString (List<WebElement> listOfWebElements){
+        List<String> listOfString = new ArrayList<>();
+        for(WebElement element: listOfWebElements){
+            String value = element.getText().trim();
+            if(value.length()>0) {
+                listOfString.add(value);
+            }
+        }
+        return listOfString;
     }
 
     public static void main(String[] args) {
