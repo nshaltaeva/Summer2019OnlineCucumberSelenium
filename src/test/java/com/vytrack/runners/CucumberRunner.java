@@ -13,7 +13,8 @@ import org.junit.runner.RunWith;
         dryRun = false, //by default it is false
         tags = "@login_with_roles_ddt_2",
         plugin = {"html:target/default-cucumber-reports",
-                    "json:target/cucumber.json"
+                    "json:target/cucumber.json",
+                "rerun:target/rerun.txt"
         }
 )
 public class CucumberRunner {
