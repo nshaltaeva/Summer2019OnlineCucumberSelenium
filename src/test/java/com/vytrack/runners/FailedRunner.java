@@ -8,8 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "@target/rerun.txt", //path to features
         glue = "com/vytrack/step_definitions",    //path to step definitions
-        plugin = {"html:target/default-cucumber-reports",
-                "json:target/cucumber.json",
+        plugin = {"html:target/rerun-default-cucumber-reports"//,
         }
 )
 
