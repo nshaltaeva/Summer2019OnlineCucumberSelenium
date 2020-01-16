@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
    //     features = "src/test/resources/features/activities/CalendarEvents.feature", //path to features
         glue = "com/vytrack/step_definitions",    //path to step definitions
         dryRun = false, //by default it is false
-        tags = "@login_with_credentials_ddt",
+        tags = "@smoke_test",
         plugin = {"html:target/default-cucumber-reports",
                     "json:target/cucumber.json",
                 "rerun:target/rerun.txt"
